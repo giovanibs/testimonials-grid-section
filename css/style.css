@@ -30,9 +30,8 @@ body {
 }
 
 #testimonials-grid {
-    min-width: 327px;
     display: grid;
-    row-gap: 2.5rem;
+    gap: 2.5rem;
     grid-auto-flow: row;
 }
 
@@ -124,4 +123,67 @@ body {
 footer {
     line-height: 3rem;
     margin: 3rem 0 1rem 0;
+}
+
+@media (min-width: 600px) {
+
+    #testimonials-grid {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(2, 255px);
+        grid-template-areas:
+            "daniel     daniel"
+            "jonathan   jeanette"
+            "patrick    patrick"
+            "kira       kira";
+   }
+
+   
+   #daniel {
+    grid-area: daniel;
+    }
+
+    #jonathan {
+        grid-area: jonathan
+    }
+
+    #jeanette {
+        grid-area: jeanette;
+    }
+
+    #patrick {
+        grid-area: patrick;
+    }
+
+    #kira {
+        grid-area: kira;
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    #testimonials-grid {
+        grid-template-columns: repeat(3, 255px);
+        gap: 3rem;
+        grid-template-areas:
+        "daniel     daniel      jeanette"
+        "jonathan   patrick     patrick"
+        "kira       kira        kira";
+   }
+
+   #daniel {
+    background-position: top 0 right 8rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    #testimonials-grid {
+        grid-template-columns: repeat(4, 255px);
+        grid-template-areas:
+            "daniel     daniel      jonathan    kira"
+            "jeanette   patrick     patrick     kira";
+   }
+
 }
