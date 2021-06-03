@@ -23,8 +23,7 @@ body {
     background-color: var(--light-grayish-blue);
     font-family: "Barlow Semi Condensed", sans-serif;
     display: grid;
-    grid-template-areas: "testimonials"
-                         "footer";
+    grid-auto-flow: row;
     justify-items: center;
     align-items: center;
     padding: 7rem 2.4rem 0 2.4rem;
@@ -34,16 +33,10 @@ body {
     min-width: 327px;
     display: grid;
     row-gap: 2.5rem;
-    grid-template-areas: 
-                        "daniel"
-                        "jonathan"
-                        "jeanette"
-                        "patrick"
-                        "kira";
+    grid-auto-flow: row;
 }
 
 #daniel {
-    grid-area: "daniel";
     background-color: var(--moderate-violet);
     background-image: url(../images/bg-pattern-quotation.svg);
     background-size: auto 102px;
@@ -52,22 +45,18 @@ body {
 }
 
 #jonathan {
-    grid-area: "jonathan";
     background-color: var(--very-dark-grayish-blue);
 }
 
 #jeanette {
-    grid-area: "jeanette";
     background-color: var(--white);
 }
 
 #patrick {
-    grid-area: "patrick";
     background-color: var(--very-dark-blackish-blue);
 }
 
 #kira {
-    grid-area: "kira";
     background-color: var(--white);
 }
 
@@ -76,9 +65,7 @@ body {
     border-radius: 0.8rem;
     display: grid;
     row-gap: 1.8rem;
-    grid-template-areas: "header"
-                        "heading"
-                        "paragraph";
+    grid-auto-flow: row;
 }
 
 .dark-card {
@@ -90,7 +77,6 @@ body {
 }
 
 .card-header {
-    grid-area: header;
     display: grid;
     grid-template-areas:
         "image name"
@@ -123,19 +109,16 @@ body {
 }
 
 .heading {
-    grid-area: heading;
     font-size: 2rem;
     color: inherit;
 }
 
 .paragraph {
-    grid-area: paragraph;
     font-size: 1.3rem;
     line-height: 1.8rem;
     color: inherit;
     opacity: 0.7;
     font-weight: 500;
-    
 }
 
 footer {
