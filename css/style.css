@@ -27,13 +27,12 @@ body {
                          "footer";
     justify-items: center;
     align-items: center;
-    padding: 7rem 2.5rem 0 2.5rem;
+    padding: 7rem 2.4rem 0 2.4rem;
 }
 
 #testimonials-grid {
-    width: 328px;
+    min-width: 327px;
     display: grid;
-    grid-template-rows: repeat(5, auto);
     row-gap: 2.5rem;
     grid-template-areas: 
                         "daniel"
@@ -46,6 +45,10 @@ body {
 #daniel {
     grid-area: "daniel";
     background-color: var(--moderate-violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-size: auto 102px;
+    background-position: top 0 right 2.4rem;
+    background-repeat: no-repeat;
 }
 
 #jonathan {
@@ -69,10 +72,10 @@ body {
 }
 
 .card {
-    padding: 3.2rem;
-    border-radius: 1rem;
+    padding: 2.5rem 3.3rem 3.3rem 3.2rem;
+    border-radius: 0.8rem;
     display: grid;
-    row-gap: 2.5rem;
+    row-gap: 1.8rem;
     grid-template-areas: "header"
                         "heading"
                         "paragraph";
@@ -89,23 +92,33 @@ body {
 .card-header {
     grid-area: header;
     display: grid;
-    grid-template-areas: "image name"
-                         "image verified";
+    grid-template-areas:
+        "image name"
+        "image verified";
+
+    justify-content: start;
+    column-gap: 1.6rem;
 }
 
 .card-header img {
     grid-area: image;
+    height: 31px;
+    width: 31px;
     border-radius: 50%;
+    border: 1px solid var(--light-grayish-blue);
 }
 
 .grad-name {
-    grid-area: name;
+    grid-area: name;  
+    font-size: 1.2rem;
+    font-weight: 500;
     color: inherit;
 }
 
 .verified-grad {
-    grid-area: verified;
+    grid-area: verified;  
     color: inherit;
+    font-size: 1.1rem;
     opacity: 0.5;
 }
 
@@ -117,10 +130,12 @@ body {
 
 .paragraph {
     grid-area: paragraph;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
     color: inherit;
     opacity: 0.7;
     font-weight: 500;
+    
 }
 
 footer {
