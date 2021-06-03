@@ -2,6 +2,7 @@
 
 :root {
     --moderate-violet: hsl(263, 55%, 52%);
+    --moderate-violet-lighter: hsl(263, 55%, 65%);
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --very-dark-blackish-blue: hsl(219, 29%, 14%);
     --white: hsl(0, 0%, 100%);
@@ -22,6 +23,7 @@ html {
 body {
     background-color: var(--light-grayish-blue);
     font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
     display: grid;
     grid-auto-flow: row;
     justify-items: center;
@@ -45,6 +47,10 @@ body {
     background-repeat: no-repeat;
 }
 
+#daniel .card-header img {
+    border-color: var(--moderate-violet-lighter) !important;
+}
+
 #jonathan {
     background-color: var(--very-dark-grayish-blue);
 }
@@ -57,12 +63,16 @@ body {
     background-color: var(--very-dark-blackish-blue);
 }
 
+#patrick .card-header img {
+    border-color: var(--moderate-violet) !important;
+}
+
 #kira {
     background-color: var(--white);
 }
 
 .card {
-    padding: 2.5rem 3.3rem 3.3rem 3.2rem;
+    padding: 2.5rem 3.3rem 3.2rem 3.2rem;
     border-radius: 0.8rem;
     display: grid;
     row-gap: 1.8rem;
@@ -71,6 +81,10 @@ body {
 }
 
 .dark-card {
+    color: var(--light-gray);
+}
+
+.dark-card .heading {
     color: var(--light-grayish-blue);
 }
 
@@ -93,13 +107,12 @@ body {
     height: 31px;
     width: 31px;
     border-radius: 50%;
-    border: 1px solid var(--light-grayish-blue);
+    border: 2px solid transparent;
 }
 
 .grad-name {
     grid-area: name;  
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.3rem;
     color: inherit;
 }
 
@@ -112,7 +125,7 @@ body {
 
 .heading {
     font-size: 2rem;
-    color: inherit;
+    font-weight: 500;
 }
 
 .paragraph {
@@ -120,10 +133,10 @@ body {
     line-height: 1.8rem;
     color: inherit;
     opacity: 0.7;
-    font-weight: 500;
 }
 
 footer {
+    font-size: 1.2rem;
     line-height: 3rem;
     margin: 1rem 0 3rem 0;
 }
